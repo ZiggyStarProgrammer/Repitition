@@ -7,13 +7,14 @@ while True:
     text = input("Gissning: ")
     as_number = int(text)
     if as_number == n:
-        print("Korrekt", antal_gissningar)
+        print(f"Korrekt! \n"
+              f"Antal gissningar: {antal_gissningar}")
         break
 
     if as_number < n:
-        print("Fel, nummret är lägre!")
-        antal_gissningar = antal_gissningar + 1
+        print("Fel, högre!")
+        antal_gissningar += 1
 
     if as_number > n:
-        print("Fel, nummret är lägre")
-        antal_gissningar = antal_gissningar + 1
+        print("Fel, lägre!")
+        antal_gissningar += 1
