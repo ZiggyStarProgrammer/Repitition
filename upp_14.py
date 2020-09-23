@@ -2,10 +2,10 @@ FRUITS = ['banana', 'apple', 'orange']
 CARS = ['volvo', 'ford', 'tesla']
 STUFF = ['Wallet', 'footrest', 'sofa']
 
+
 def run():
-    basket = [
-        'volvo', 'is', 'an', 'orange', 'sofa', 'apple', 'footrest'
-    ]
+    basket = input("Text: ").split(',')
+    basket.sort()
     cars = []
     fruits = []
     stuff = []
@@ -21,8 +21,8 @@ def run():
             rest.append(item)
     write_things(cars, 'Cars')
     write_things(fruits, 'Fruits')
-    write_things(rest, 'Misc')
     write_things(stuff, 'Stuff')
+    write_things(rest, 'Misc')
 
 
 def write_things(items, kind):
